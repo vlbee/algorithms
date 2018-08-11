@@ -1,10 +1,6 @@
 const test = require('tape');
 const merge = require('./merge')
 
-// test('Test if tape is working', (t) => {
-//   t.ok(true, 'tape is working');
-//   t.end();
-// });
 
 test('Merge returns an array', (t) => {
   const actual = merge([2], [1])
@@ -21,7 +17,6 @@ test('Merge returns sorted array', (t) => {
   let expected = [1]
   t.deepEqual(actual, expected, 'merge([1]) returns [1]')
 
-
   actual = merge([])
   expected = []
   t.deepEqual(actual, expected, 'merge([]) returns []')
@@ -33,7 +28,6 @@ test('Merge returns sorted array', (t) => {
   actual = merge([1, 2, 3])
   expected = [1, 2, 3]
   t.deepEqual(actual, expected, 'merge([1, 2, 3]) returns [1, 2, 3]')
-
 
   actual = merge([2], [1])
   expected = [1, 2]
@@ -63,6 +57,3 @@ test('Merge returns sorted array', (t) => {
   t.end();
 });
 
-// actual = merge([1], [2])
-// expected = [1, 2]
-// t.deepEqual(actual, expected, ' returns ')

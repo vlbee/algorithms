@@ -15,7 +15,6 @@ function selectionSort(array) {
     array.splice(index, 1)
     result = result.concat(Array.of(min))
   }
-
   return result;
 }
 

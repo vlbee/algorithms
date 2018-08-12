@@ -4,14 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "tape ./mergeSort/*.test.js | tap-spec",
-    "test:watch": "nodemon ./*/*.test.js | tap-spec"
+    "test": "tape ./*/*.test.js | tap-spec",
+    "test:watch": "nodemon ./*/*.test.js | tap-spec",
+    "bench": "node ./benchmarking/benchmark.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "benchmark": "^2.1.4",
     "nodemon": "^1.18.3",
     "tap-spec": "^5.0.0",
     "tape": "^4.9.1"
-  }
+  },
+  "dependencies": {}
 }

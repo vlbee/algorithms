@@ -1,11 +1,10 @@
 const Benchmark = require('benchmark');
 const Sort = require('../Sort')
-const generateLongList = require('./longList')
+const generateLongList = require('./generateLongList')
 
 const suite = new Benchmark.Suite;
 const listLength = +process.argv[2]
-// npm run bench 100
-
+// Example CLI command: npm run bench 100
 
 function runBenchSuite(num) {
   console.log('list length:', num)

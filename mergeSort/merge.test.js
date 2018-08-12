@@ -53,6 +53,13 @@ test('merge returns a sorted array', (t) => {
   expected = [1, 1, 2, 2]
   t.deepEqual(actual, expected, 'merge([1, 2], [1, 2]) returns [1, 1, 2, 2]')
 
+  actual = merge([0], [-2])
+  expected = [-2, 0]
+  t.deepEqual(actual, expected, 'merge([0], [-2]) returns [-2, 0]')
+
+  actual = merge([-2, 0], [-1, 1])
+  expected = [-2, -1, 0, 1]
+  t.deepEqual(actual, expected, 'merge([-2, 0], [-1, 1]) returns [-2, -1, 0, 1]')
 
   t.end();
 });

@@ -11,8 +11,6 @@ test('mergeSort returns correctly', (t) => {
 
   actual = mergeSort([1, 4, 2, -8, 345, 3, 43, 32, 5643, 63, 0, -2.5, 2, 55, 1, 0])
   expected = [-8, -2.5, 0, 0, 1, 1, 2, 2, 3, 4, 32, 43, 55, 63, 345, 5643]
-
-  console.log(actual)
   t.deepEqual(actual, expected, 'mergeSort([1, 4, 2, -8, 345, -1, 43, 32, 5643, 63, 0, 43, 2, 55, 1, 0, 92]) returned [ -8, -2.5, 0, 0, 1, 1, 2, 2, 3, 4, 32, 43, 55, 63, 345, 5643 ]')
 
   t.end();

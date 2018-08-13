@@ -1,5 +1,8 @@
 # algorithms
 
+To run locally: 
+`npm i -D tape tap-spec nodemon benchmark`
+
 ## Sorting Functions
 
 * `bubbleSort`, `selesctionSort` and `insertionSort` all mutate the source array in place with splice.

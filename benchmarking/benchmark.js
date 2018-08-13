@@ -1,5 +1,10 @@
 const Benchmark = require('benchmark');
-const { bubbleSort, selectionSort, insertionSort, mergeSort, quickSort } = require('../sortAlgorithms')
+const {
+  bubbleSort,
+  selectionSort,
+  insertionSort,
+  mergeSort,
+  quickSort } = require('../sortAlgorithms')
 const generateLongList = require('./generateLongList')
 
 const suite = new Benchmark.Suite;
@@ -7,7 +12,7 @@ const listLength = +process.argv[2]
 // Example CLI command: npm run bench 100
 
 function runBenchSuite(num) {
-  console.log('list length:', num)
+  console.log('NEW BENCHMARKING SUITE - list length:', num)
 
   suite.add('Bubble Sort Test', function () {
     bubbleSort(generateLongList(num));
@@ -36,3 +41,4 @@ function runBenchSuite(num) {
 }
 
 runBenchSuite(listLength)
+

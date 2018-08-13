@@ -1,5 +1,5 @@
 const Benchmark = require('benchmark');
-const { selectionSort, insertionSort, mergeSort } = require('../sortAlgorithms')
+const { bubbleSort, selectionSort, insertionSort, mergeSort, quickSort } = require('../sortAlgorithms')
 const generateLongList = require('./generateLongList')
 
 const suite = new Benchmark.Suite;
@@ -9,14 +9,20 @@ const listLength = +process.argv[2]
 function runBenchSuite(num) {
   console.log('list length:', num)
 
-  suite.add('Selection Sort Test', function () {
-    selectionSort(generateLongList(num));
+  suite.add('Bubble Sort Test', function () {
+    bubbleSort(generateLongList(num));
   })
+    .add('Selection Sort Test', function () {
+      selectionSort(generateLongList(num));
+    })
     .add('Insertion Sort Test', function () {
       insertionSort(generateLongList(num));
     })
     .add('Merge Sort Test', function () {
       mergeSort(generateLongList(num));
+    })
+    .add('Quick Sort Test', function () {
+      quickSort(generateLongList(num));
     })
     // add listeners
     .on('cycle', function (event) {

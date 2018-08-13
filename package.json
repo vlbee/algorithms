@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "tape ./*/*.test.js | tap-spec",
-    "test:watch": "nodemon ./*/*.test.js | tap-spec",
-    "bench": "node ./benchmarking/benchmark.js"
+    "test": "tape ./*/*/*.test.js | tap-spec",
+    "test:sort": "tape ./sorting/*/*.test.js | tap-spec",
+    "bench": "node ./sorting/benchmarking/benchmark.js"
   },
   "author": "",
   "license": "ISC",
